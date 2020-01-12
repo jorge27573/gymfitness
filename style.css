@@ -10,6 +10,120 @@
     Tags: Gym, Gimnasio
     Text Domain: gymfitness
 */
+:root{
+    /**  Fuentes **/
+    --fuentePrincipal: 'Staatliches', cursive;
+    --fuenteTexto: 'Open Sans', sans-serif;
+    --fuenteSecudaria:  'Raleway', sans-serif;
+
+    /** Colores **/
+    --colorPrimario: #ff5b00;
+    --grisOscuro: #2f2e2e;
+    --grisClaro: #ebebeb;
+    --blanco: #fff;
+    --negro: #000;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* Ahora 10px = 1rem*/
+}
 body{
-    background: red;
+    font-size: 16px; 
+    font-size: 1.6rem; 
+    line-height: 2; 
+    font-family:  var(--fuenteSecudaria);
+}
+*,
+*::before, 
+*::after{
+    box-sizing: inherit;
+}
+
+/** Headings **/
+h1, h2, h3, h4{
+    font-family:  var(--fuentePrincipal);
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+h1{
+    font-size: 6rem;
+}
+h2{
+    font-size: 4.8rem;
+}
+h3{
+    font-size: 3.6rem;
+}
+h4{
+    font-size: 2.4rem;
+}
+
+/**  Globales **/
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.contenedor{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/** Header **/
+.site-header{
+    background: var(--grisOscuro);
+    padding: 2rem 0;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+/* Menu */
+.menu-principal{
+    display: none;
+}
+.menu-principal a{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 2.2rem;
+    padding: .5rem 2rem;
+}
+
+/* Media queries menu */
+@media (min-width: 768px) {
+    .menu-principal{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .menu-principal a{
+        font-size: 2.6rem;
+    }
+    .menu-principal li{
+        margin-right: 2rem;
+    }
+    .menu-principal li:last-of-type{
+        margin-right: 0;
+    }
+    .menu-principal .menu{
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu-principal .current-menu-item{
+        border-bottom: 3px solid var(--colorPrimario);
+    }
+    .barra-navegacion{
+        display: flex;
+        justify-content: space-between;
+    }
 }
