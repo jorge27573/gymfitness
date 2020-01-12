@@ -1,2 +1,2 @@
-# gynfitness
-Practica de creacion de pagina Web gynfitness
+# gymfitness
+Practica de creacion de pagina Web gymfitness
