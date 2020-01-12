@@ -1,3 +1,5 @@
+<?php get_header( ) ;?>
+
 
 <?php
 
@@ -11,5 +13,7 @@
 
     <p>Escrito por: <?php  the_author( );?></p>
     <p>Fecha edicion: <?php  the_date( );?></p>
-    
+
 <?php endwhile; ?>
+
+<?php get_footer( ) ;?>

@@ -1,1 +1,3 @@
-<h1>Hola WordPress desde index.php</h1>
+<?php get_header( ) ;?>
+
+<?php get_footer( ) ;?>
