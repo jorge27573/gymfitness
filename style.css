@@ -97,7 +97,24 @@ img{
     color: var(--blanco);
     font-size: 2.2rem;
     padding: .5rem 2rem;
+    display: block;
+} 
+
+/* .slicknav_menu */
+.slicknav_menu{
+    background: var(--grisOscuro);
 }
+.slicknav_nav a{
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2rem;
+}
+.slicknav_btn{
+    background: var(--colorPrimario);
+    margin: 3rem 0;
+    padding: 1.5rem;
+}
+
 
 /* Media queries menu */
 @media (min-width: 768px) {
@@ -106,9 +123,7 @@ img{
         align-items: center;
         justify-content: flex-end;
     }
-    .menu-principal a{
-        font-size: 2.6rem;
-    }
+   
     .menu-principal li{
         margin-right: 2rem;
     }
@@ -125,5 +140,45 @@ img{
     .barra-navegacion{
         display: flex;
         justify-content: space-between;
+    }
+    
+    /* Menu responsive */
+    .slicknav_menu{
+        display: none;
+    }
+
+    /* Efecto menu */
+    .menu-principal a{
+        font-size: 2.6rem;
+        position: relative;
+        z-index: 1;
+    }
+    .menu-principal a::before,
+    .menu-principal a::after{
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 50%;
+        background: var(--colorPrimario);
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform .6s;
+    }
+    .menu-principal a::before{
+        top: 0;
+        left: 0;
+        transform-origin: left;
+    }
+    .menu-principal a::after{
+        top: 50%;
+        left: 0;
+        transform-origin: right;
+    }
+    .menu-principal a:hover::before{
+        transform: scaleX(1);
+    }
+    .menu-principal a:hover::after{
+        transform: scaleX(1);
     }
 }
